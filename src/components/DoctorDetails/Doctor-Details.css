@@ -1,0 +1,14 @@
+/* .doc-details {
+  display: grid;
+  grid-template-columns: 2fr 9fr;
+  gap: 10px;
+} */
+
+.doc-img {
+  width: 100%;
+}
+
+.doc-text {
+  text-align: left;
+  line-height: 10px;
+}

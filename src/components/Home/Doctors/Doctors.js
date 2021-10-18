@@ -6,7 +6,10 @@ const Doctors = () => {
   useEffect(() => {
     fetch("/doctorsData.json")
       .then((res) => res.json())
-      .then((data) => setDoctors(data));
+      .then((data) => {
+        console.log(data);
+        setDoctors(data);
+      });
   }, []);
   return (
     <div className="my-4 container">

@@ -1,8 +1,9 @@
+
 [
     {
       "name": "Dr. Abdul Hamid",
-      "id": 1,
-      "img": "./images/doc-1.jpg",
+      "id": "1",
+      "img": "https://i.ibb.co/0Dr9gXM/doc-1.jpg",
       "specialist": "Skin & Allergy Specialist",
       "time": "6pm to 10pm",
       "qualifications": "MBBS (RMC), BCS (Health), DDV (Dhaka), FMD (Dhaka), DDOC (Austria)",
@@ -16,8 +17,8 @@
     },
     {
       "name": "Dr. Ammy Jhon",
-      "id": 2,
-      "img": "./images/doc-2.jpg",
+      "id": "2",
+      "img": "https://i.ibb.co/0ZFkr5X/doc-2.jpg",
       "specialist": "Medicine Specialist",
       "time": "6pm to 10pm",
       "qualifications": "MBBS, BCS (Health), DDV (BSMMU).",
@@ -31,8 +32,8 @@
     },
     {
       "name": "Dr. Tazmeri Sultana",
-      "id": 3,
-      "img": "./images/doc-3.jpg",
+      "id": "3",
+      "img": "https://i.ibb.co/NSKNK1M/doc-3.jpg",
       "specialist": "Gastroenterology Specialist",
       "time": "3pm to 8pm",
       "qualifications": "MBBS, BCS (Health), MD (Gastroenterology)",
@@ -46,8 +47,8 @@
     },
     {
       "name": "Dr.J. M. Ariful Islam",
-      "id": 4,
-      "img": "./images/doc-4.jpg",
+      "id": "4",
+      "img": "https://i.ibb.co/z8TvFmz/doc-4.jpg",
       "specialist": "Liver, Pancreatitis Specialist",
       "time": "7pm to 10pm",
       "qualifications": "MBBS, BCS (Health), FCPS (MEDICINE), MD (Gastrenterology-Phase-B)",
@@ -61,8 +62,8 @@
     },
     {
       "name": "Dr. Ammy Jhon",
-      "id": 5,
-      "img": "./images/doc-5.jpg",
+      "id": "5",
+      "img": "https://i.ibb.co/j6y30s6/doc-5.jpg",
       "specialist": "Orthopedics And Spine Specialist",
       "time": "6pm to 10pm",
       "qualifications": "MBBS, MS(Ortho)",
@@ -76,8 +77,8 @@
     },
     {
       "name": "Dr. Ammy Jhon",
-      "id": 6,
-      "img": "./images/doc-6.jpg",
+      "id": "6",
+      "img": "https://i.ibb.co/3yWdc2v/doc-6.jpg",
       "specialist": "Diabetes and Endocrine specialist",
       "time": "8pm to 12pm",
       "qualifications": "MBBS, MD(Endocrinology), BCS(Health)",
