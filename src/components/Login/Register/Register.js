@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import googleImg from "../../../images/logo/google.png";
+
 import "./Register.css";
 
 const Register = () => {
@@ -65,10 +65,6 @@ const Register = () => {
 
         <p style={{ color: "red" }}>error</p>
       </form>
-      <button className="google-button centered rounded-pill" onClick="">
-        {" "}
-        <img src={googleImg} alt="google" /> Continue with Google{" "}
-      </button>
     </div>
   );
 };

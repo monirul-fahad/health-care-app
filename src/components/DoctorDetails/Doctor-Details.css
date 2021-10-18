@@ -10,5 +10,11 @@
 
 .doc-text {
   text-align: left;
-  line-height: 10px;
+}
+
+.input-style {
+  width: 300px;
+  height: 40px;
+  margin: 10px;
+  border-color: aliceblue;
 }

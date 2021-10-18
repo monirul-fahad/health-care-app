@@ -13,7 +13,9 @@
       "offDay": "Friday",
       "floor": "7th Floor",
       "room": "708",
-      "department": "Skin and Allergy"
+      "department": "Skin and Allergy",
+      "fee": "$100",
+     "fee2": "$70"
     },
     {
       "name": "Dr. Ammy Jhon",
@@ -28,7 +30,9 @@
       "offDay": "Friday",
       "floor": "6th Floor",
       "room": "601",
-      "department": "Medicine"
+      "department": "Medicine",
+      "fee": "$100",
+     "fee2": "$70"
     },
     {
       "name": "Dr. Tazmeri Sultana",
@@ -43,7 +47,9 @@
       "offDay": "Friday",
       "floor": "6th Floor",
       "room": "601",
-      "department": "Gastroenterology"
+      "department": "Gastroenterology",
+      "fee": "$100",
+     "fee2": "$70"
     },
     {
       "name": "Dr.J. M. Ariful Islam",
@@ -58,7 +64,9 @@
       "offDay": "Saturday ",
       "floor": "6th Floor",
       "room": "601",
-      "department": "ENT"
+      "department": "ENT",
+      "fee": "$100",
+     "fee2": "$70"
     },
     {
       "name": "Dr. Ammy Jhon",
@@ -73,7 +81,9 @@
       "offDay": "Sunday",
       "floor": "2nd Floor",
       "room": "207",
-      "department": "Orthopedics"
+      "department": "Orthopedics",
+      "fee": "$100",
+     "fee2": "$70"
     },
     {
       "name": "Dr. Ammy Jhon",
@@ -88,6 +98,8 @@
       "offDay": "Monday",
       "floor": "3rd Floor",
       "room": "320",
-      "department": "Pathologist"
+      "department": "Pathologist",
+      "fee": "$100",
+     "fee2": "$70"
     }
   ]

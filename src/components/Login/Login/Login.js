@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import googleImg from "../../../images/logo/google.png";
 import "./Login.css";
 const Login = () => {
   return (
-    <div className="text-center container centered my-5 login">
+    <div className="text-center container  my-5 login">
       <form
         className="formStyle container p-5"
         action=""
@@ -43,6 +44,10 @@ const Login = () => {
         </p>
         <p style={{ color: "red" }}>Error</p>
       </form>
+      <button className="google-button centered rounded-pill" onClick="">
+        {" "}
+        <img src={googleImg} alt="google" /> Continue with Google{" "}
+      </button>
     </div>
   );
 };
