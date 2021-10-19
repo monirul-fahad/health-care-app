@@ -11,12 +11,14 @@ const Doctors = () => {
       });
   }, []);
   return (
-    <div className="my-4 container" id="doctors">
-      <h2 className="my-3">Special Consultants</h2>
-      <div className="doctors-container">
-        {doctors.map((doctor) => (
-          <Doctor key={doctor.id} doctor={doctor}></Doctor>
-        ))}
+    <div id="doctors">
+      <div className="py-5 container">
+        <h2 className="my-3">Special Consultants</h2>
+        <div className="doctors-container">
+          {doctors.map((doctor) => (
+            <Doctor key={doctor.id} doctor={doctor}></Doctor>
+          ))}
+        </div>
       </div>
     </div>
   );

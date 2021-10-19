@@ -1,0 +1,17 @@
+.icons {
+  font-size: 40px;
+  color: aqua;
+}
+
+.about-details {
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.about-img {
+  max-width: 400px;
+}
+
+.about-heading {
+  color: rgb(23, 184, 130);
+}

@@ -5,12 +5,14 @@ import Navbar from "./components/Shared/Navbar/Navbar";
 import Home from "./components/Home/Home/Home";
 import NotFound from "./components/NotFound/NotFound";
 import Login from "./components/Login/Login/Login";
-import Register from "./components/Login/Register/Register";
 import DoctorDetails from "./components/DoctorDetails/DoctorDetails";
 import AuthProvider from "./context/AuthProvider";
-import Header from "./components/Navbar2";
+// import Header from "./components/Navbar2";
 import Footer from "./components/Shared/Footer/Footer";
 import PrivatteRoute from "./components/Login/PrivateRoute/PrivatteRoute";
+
+import Blogs from "./components/Blogs/Blogs";
+import Contact from "./components/Contact/Contact";
 // import Navbar2 from "./components/Navbar2";
 
 function App() {
@@ -18,8 +20,7 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Router>
-          {/* <Navbar></Navbar> */}
-          <Header></Header>
+          <Navbar></Navbar>
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -30,9 +31,13 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/signup">
-              <Register></Register>
+            <Route path="/blogs">
+              <Blogs></Blogs>
             </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+
             <PrivatteRoute path="/doctorDetails/:id">
               <DoctorDetails></DoctorDetails>
             </PrivatteRoute>

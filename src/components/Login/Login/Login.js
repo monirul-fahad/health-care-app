@@ -1,50 +1,131 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import googleImg from "../../../images/logo/google.png";
 import "./Login.css";
 const Login = () => {
-  const { signInUsingGoogle } = useAuth();
+  const { signInUsingGoogle, handleUserRegister, handleUserLogin } = useAuth();
   const location = useLocation();
-  console.log("came from", location.state?.from);
+  const history = useHistory();
+  const redirect_url = location.state?.from || "/home";
+  const handleGoogleLogin = () => {
+    signInUsingGoogle().then((result) => {
+      history.push(redirect_url);
+    });
+  };
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isLogin, setIsLogin] = useState(false);
+
+  const toggleLogin = (e) => {
+    setIsLogin(e.target.checked);
+  };
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    if (password.length < 6) {
+      setError("plse input valid pass");
+      return;
+    }
+    isLogin
+      ? handleUserLogin(email, password)
+      : handleUserRegister(email, password, name);
+  };
+
   return (
     <div className="text-center container  my-5 login">
-      <form className="formStyle container p-5" action="">
-        <h3 className="pb-4">Login your account</h3>
-        <input
-          type="text"
-          name="email"
-          className="form-control"
-          placeholder="Your Email "
-          required
-        />
+      <form onSubmit={handleSignUp}>
+        <h3 className="text-primary">
+          Please {isLogin ? "Login" : "Register"}
+        </h3>
+
+        {!isLogin && (
+          <div className="row mb-3">
+            <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">
+              Name
+            </label>
+            <div className="col-sm-10">
+              <input
+                onBlur={handleNameChange}
+                type="text"
+                className="form-control"
+                placeholder=""
+                required
+              />
+            </div>
+          </div>
+        )}
+
+        <div className="row mb-3">
+          <label htmlFor="inputName" className="col-sm-2 col-form-label">
+            Email
+          </label>
+          <div className="col-sm-10">
+            <input
+              onBlur={handleEmailChange}
+              type="email"
+              className="form-control"
+              id="inputName"
+              required
+            />
+          </div>
+        </div>
+        <div className="row mb-3">
+          <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">
+            Password
+          </label>
+          <div className="col-sm-10">
+            <input
+              onBlur={handlePasswordChange}
+              type="password"
+              className="form-control"
+              id="inputPassword3"
+              required
+            />
+          </div>
+        </div>
+
+        <div className="row mb-3">
+          <div className="col-sm-10 offset-sm-2">
+            <div className="form-check">
+              <input
+                onChange={toggleLogin}
+                className="form-check-input"
+                type="checkbox"
+                id="gridCheck1"
+              />
+              <label className="form-check-label" htmlFor="gridCheck1">
+                Already Have an Account?
+              </label>
+            </div>
+          </div>
+        </div>
+        <div className=" mb-3 text-danger">{error}</div>
+        <button type="submit" className="btn btn-primary">
+          {isLogin ? "Login" : "Register"}
+        </button>
         <br />
-        <input
-          type="password"
-          id="password"
-          className="form-control"
-          name="password"
-          placeholder="Your Password"
-          required
-        />
-        <br />
-        <input
-          style={{ background: "#2053C9", color: "#fff" }}
-          type="submit"
-          className="form-control"
-          value="Login"
-        />
-        <p>
-          Don’t have an account?{" "}
-          <Link className="text-danger" to="/signup">
-            Create an account
-          </Link>{" "}
-        </p>
-        <p style={{ color: "red" }}>Error</p>
       </form>
+      <br />
+      <br />
       <button
         className="google-button centered rounded-pill"
-        onClick={signInUsingGoogle}
+        onClick={handleGoogleLogin}
       >
         {" "}
         <img src={googleImg} alt="google" /> Continue with Google{" "}

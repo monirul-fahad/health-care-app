@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+      "name": "Importance of Medical Knowledge",
+      "author": "Dr. Monirul Fahad",
+      "blog": "Medical Knowledge includes an understanding of all established and evolving biomedical, clinical, epidemiological, and social-behavioral sciences. They must also demonstrate the ability to apply it to patient care and appropriately and enthusiastically transfer that knowledge to others",
+      "img": "https://i.ibb.co/rcvCgRH/blog-1.jpg"
+    },
+    {
+        "id": "2",
+      "name": "Surgery and Surgent",
+      "author": "Dr. Anusha Islam",
+      "blog": "Surgery is a medical or dental specialty that uses operative manual and instrumental techniques on a person to investigate or treat a pathological condition such as a disease or injury, to help improve bodily function, appearance, or to repair unwanted ruptured areas.",
+      "img": "https://i.ibb.co/0KzFfcB/blog-3.jpg"
+    },
+    {
+        "id": "3",
+      "name": "Healthy Life",
+      "author": "Dr. Anika Islam",
+      "blog": "There are tons of healthy living blogs and resources online that it can feel overwhelming — with so many to choose from, how do you know which you should really pay attention to? Here’s a place to start: our favorite health blogs that help empower people to find customized",
+      "img": "https://i.ibb.co/j5mn3zd/A-doctor-listening-to-his-patient-s-heartbeat-with-a-stethoscope.jpg"
+    },
+    {
+        "id": "4",
+      "name": "Technology in Medical",
+      "author": "Dr. Rafiq Ahsan",
+      "blog": "By using technology, the medical field can make discoveries regarding treatments, data collection, symptom and disease research, cure research, human aiding devices (like hearing devices and speaking devices). Technology has made the medical area very accessible to people.with so many to choose from you should really pay attention to",
+      "img": "https://i.ibb.co/HGS8yjx/blog-2.webp"
+    }
+  ]

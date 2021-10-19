@@ -4,6 +4,9 @@ import {
   signOut,
   GoogleAuthProvider,
   onAuthStateChanged,
+  createUserWithEmailAndPassword,
+  updateProfile,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../components/Login/firebase/firebase.init";
@@ -20,11 +23,9 @@ const useFirebase = () => {
   const signInUsingGoogle = () => {
     setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .finally(() => setIsLoading(false));
+    return signInWithPopup(auth, googleProvider).finally(() =>
+      setIsLoading(false)
+    );
   };
 
   //observe user state change
@@ -47,11 +48,40 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
+  const handleUserRegister = (email, password, name) => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        handleUserName(name);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  const handleUserName = (name) => {
+    updateProfile(auth.currentUser, { displayName: name }).then((result) => {});
+  };
+
+  const handleUserLogin = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   return {
     user,
     isLoading,
     signInUsingGoogle,
     logOut,
+    handleUserRegister,
+    handleUserName,
+    handleUserLogin,
   };
 };
 

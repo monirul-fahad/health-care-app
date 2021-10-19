@@ -5,17 +5,17 @@ const Footer = () => {
   return (
     <div className="bg-dark py-5">
       <div className="container">
-        <div className="footer ">
-          <div>
+        <div className="footer row">
+          <div className="col-md-6 col-12 text-center text-md-start">
             <img
-              className="img-fluid"
+              className="img-fluid mb-3"
               src={footerImg}
               alt="logo of footer"
               width="150"
               height="50"
             />
           </div>
-          <div className="ul-style">
+          <div className="ul-style col-md-3 col-6">
             <ul>
               <li>
                 <a href="#">Medical News</a>
@@ -31,7 +31,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="ul-style">
+          <div className="ul-style col-md-3 col-6">
             <ul>
               <li>
                 <a href="#">About Us</a>
