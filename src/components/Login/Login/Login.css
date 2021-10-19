@@ -20,3 +20,13 @@
   padding: 10px;
   height: auto;
 }
+
+@media only screen and (max-width: 688px) {
+  .login {
+    width: 280px !important;
+  }
+
+  .google-button {
+    width: 200px;
+  }
+}

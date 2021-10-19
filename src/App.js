@@ -7,13 +7,12 @@ import NotFound from "./components/NotFound/NotFound";
 import Login from "./components/Login/Login/Login";
 import DoctorDetails from "./components/DoctorDetails/DoctorDetails";
 import AuthProvider from "./context/AuthProvider";
-// import Header from "./components/Navbar2";
+
 import Footer from "./components/Shared/Footer/Footer";
 import PrivatteRoute from "./components/Login/PrivateRoute/PrivatteRoute";
 
 import Blogs from "./components/Blogs/Blogs";
 import Contact from "./components/Contact/Contact";
-// import Navbar2 from "./components/Navbar2";
 
 function App() {
   return (

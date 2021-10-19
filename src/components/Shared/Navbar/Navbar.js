@@ -44,7 +44,7 @@ const Header = () => {
             <Nav.Link
               className="text-white fs-5"
               as={HashLink}
-              to="/home#experts"
+              to="/home#about"
             >
               About Us
             </Nav.Link>

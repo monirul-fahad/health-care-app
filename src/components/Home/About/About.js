@@ -6,7 +6,7 @@ import { RiMedicineBottleLine } from "react-icons/ri";
 
 const About = () => {
   return (
-    <div className="container">
+    <div className="container" id="about">
       <div className="py-5">
         <div className="row align-items-center">
           <div className="col-md-5">
