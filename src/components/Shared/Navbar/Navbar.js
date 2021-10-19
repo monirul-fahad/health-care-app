@@ -1,7 +1,11 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 import logo from "../../../images/logo/logo-2.png";
 const Navbar = () => {
+  const { user, logOut } = useAuth();
+  console.log(user);
   return (
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -32,24 +36,31 @@ const Navbar = () => {
               <Link to="/service" className="nav-link fs-5">
                 About us
               </Link>
-              <Link to="/home" className="nav-link fs-5">
-                Consultants
+              <Link to="/home" href="#doctor" className="nav-link fs-5">
+                Find a Doctor
               </Link>
 
               <Link to="/home" className="nav-link fs-5">
                 Contact
               </Link>
             </div>
-            <div className="d-flex">
-              <h5>
-                Signed in as: <a href="#login">Mark Otto</a>
+            <div className="d-lg-flex align-items-center block">
+              <h5 className="pe-3">
+                Signed in as: <a href="#login">{user?.displayName}</a>
               </h5>
-              <Link to="/login">
-                <button className="btn btn-warning me-2">Log In</button>
-              </Link>
-              <Link to="/signup">
-                <button className="btn btn-success me-2">Sign Up</button>
-              </Link>
+              {user?.email ? (
+                <Button variant="dark">Log Out</Button>
+              ) : (
+                <>
+                  {" "}
+                  <Link to="/login">
+                    <button className="btn btn-warning me-2">Log In</button>
+                  </Link>
+                  <Link to="/signup">
+                    <button className="btn btn-success me-2">Sign Up</button>
+                  </Link>{" "}
+                </>
+              )}
             </div>
           </div>
         </div>

@@ -1,15 +1,16 @@
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
-// import { Link } from "react-router-dom";
-// import useAuth from "../../../hooks/useAuth";
-// import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
-const Navbar2 = () => {
-  // const { user, logOut } = useAuth();
+import { HashLink } from "react-router-hash-link";
+import useAuth from "../hooks/useAuth";
+
+const Header = () => {
+  const { user, logOut } = useAuth();
   return (
     <>
       <Navbar
-        bg="dark"
+        bg="secondary"
         variant="dark"
         sticky="top"
         collapseOnSelect
@@ -19,25 +20,49 @@ const Navbar2 = () => {
           <Navbar.Brand href="#home">Genius Car</Navbar.Brand>
 
           <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
-            <Nav.Link href="/home#home">Home</Nav.Link>
-            <Nav.Link href="/home#services">Services</Nav.Link>
-            <Nav.Link href="/home#experts">Experts</Nav.Link>
-
-            <Button onClick="" variant="light">
+          <Navbar.Collapse className="justify-content-center">
+            <Nav.Link className="text-white fs-5" as={HashLink} to="/home#home">
+              Home
+            </Nav.Link>
+            <Nav.Link
+              className="text-white fs-5"
+              as={HashLink}
+              to="/home#services"
+            >
+              Services
+            </Nav.Link>
+            <Nav.Link
+              className="text-white fs-5"
+              as={HashLink}
+              to="/home#experts"
+            >
+              Experts
+            </Nav.Link>
+          </Navbar.Collapse>
+          <Navbar.Text>
+            Signed in as: <a href="#login">{user?.displayName}</a>
+          </Navbar.Text>
+          {user?.email ? (
+            <Button onClick={logOut} variant="light" className="ms-2">
               Logout
             </Button>
-
-            <Nav.Link href="/login"> Login </Nav.Link>
-
-            <Navbar.Text>
-              Signed in as: <a href="#login">displayName</a>
-            </Navbar.Text>
-          </Navbar.Collapse>
+          ) : (
+            <>
+              {" "}
+              <Nav.Link as={Link} to="/login">
+                {" "}
+                <button className="btn btn-warning">Log In</button>{" "}
+              </Nav.Link>
+              <Nav.Link as={Link} to="/signup">
+                {" "}
+                <button className="btn btn-success">Sign Up</button>{" "}
+              </Nav.Link>
+            </>
+          )}
         </Container>
       </Navbar>
     </>
   );
 };
 
-export default Navbar2;
+export default Header;

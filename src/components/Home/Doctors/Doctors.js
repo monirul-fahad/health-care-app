@@ -7,12 +7,11 @@ const Doctors = () => {
     fetch("/doctorsData.json")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setDoctors(data);
       });
   }, []);
   return (
-    <div className="my-4 container">
+    <div className="my-4 container" id="doctors">
       <h2 className="my-3">Special Consultants</h2>
       <div className="doctors-container">
         {doctors.map((doctor) => (

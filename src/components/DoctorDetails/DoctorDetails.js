@@ -15,7 +15,7 @@ const DoctorDetails = () => {
 
   const ExactData = data.filter((td) => td.id === id);
   return (
-    <div className="container mt-5">
+    <div className="container my-5">
       <h1>{ExactData[0]?.name}</h1>
       <p className="fw-bold">{ExactData[0]?.qualifications}</p>
       <div className=" row">

@@ -6,17 +6,13 @@ import "./Register.css";
 const Register = () => {
   return (
     <div className="text-center container centered my-5 signUp">
-      <form
-        className="formStyle container p-5"
-        action=""
-        onSubmit="{handleSignup}"
-      >
+      <form className="formStyle container p-5" action="" onSubmit="">
         <h3 className="pb-4">Create an account</h3>
         <input
           name="name"
           className="form-control"
           type="text"
-          onBlur="{handleName}"
+          onBlur=""
           placeholder="Name"
         />
         <br />
@@ -24,7 +20,7 @@ const Register = () => {
           type="text"
           name="email"
           className="form-control"
-          onBlur="{handleEmail}"
+          onBlur=""
           placeholder="Your Email"
           required
         />
@@ -33,7 +29,7 @@ const Register = () => {
           type="password"
           id="password"
           className="form-control"
-          onBlur="{handlePassword}"
+          onBlur=""
           name="password"
           placeholder="Your Password"
           required

@@ -1,21 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 import googleImg from "../../../images/logo/google.png";
 import "./Login.css";
 const Login = () => {
+  const { signInUsingGoogle } = useAuth();
+  const location = useLocation();
+  console.log("came from", location.state?.from);
   return (
     <div className="text-center container  my-5 login">
-      <form
-        className="formStyle container p-5"
-        action=""
-        onSubmit="{handleSubmit}"
-      >
+      <form className="formStyle container p-5" action="">
         <h3 className="pb-4">Login your account</h3>
         <input
           type="text"
           name="email"
           className="form-control"
-          onBlur="{handleBlur}"
           placeholder="Your Email "
           required
         />
@@ -24,7 +23,6 @@ const Login = () => {
           type="password"
           id="password"
           className="form-control"
-          onBlur="{handleBlur}"
           name="password"
           placeholder="Your Password"
           required
@@ -44,7 +42,10 @@ const Login = () => {
         </p>
         <p style={{ color: "red" }}>Error</p>
       </form>
-      <button className="google-button centered rounded-pill" onClick="">
+      <button
+        className="google-button centered rounded-pill"
+        onClick={signInUsingGoogle}
+      >
         {" "}
         <img src={googleImg} alt="google" /> Continue with Google{" "}
       </button>
