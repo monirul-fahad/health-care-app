@@ -4,7 +4,12 @@ import useAuth from "../../../hooks/useAuth";
 import googleImg from "../../../images/logo/google.png";
 import "./Login.css";
 const Login = () => {
-  const { signInUsingGoogle, handleUserRegister, handleUserLogin } = useAuth();
+  const {
+    signInUsingGoogle,
+    handleUserRegister,
+    handleUserLogin,
+    handleUserName,
+  } = useAuth();
   const location = useLocation();
   const history = useHistory();
   const redirect_url = location.state?.from || "/home";
@@ -38,13 +43,28 @@ const Login = () => {
 
   const handleSignUp = (e) => {
     e.preventDefault();
-    if (password.length < 6) {
-      setError("plse input valid pass");
-      return;
-    }
+
     isLogin
       ? handleUserLogin(email, password)
-      : handleUserRegister(email, password, name);
+          .then((result) => {
+            console.log(result.user);
+
+            history.push(redirect_url);
+          })
+          .catch((error) => {
+            setError(error.message);
+          })
+      : handleUserRegister(email, password, name)
+          .then((result) => {
+            const user = result.user;
+
+            handleUserName(name).then((result) => {});
+            history.push(redirect_url);
+            window.location.reload();
+          })
+          .catch((error) => {
+            setError(error.message);
+          });
   };
 
   return (

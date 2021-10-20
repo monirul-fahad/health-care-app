@@ -49,29 +49,15 @@ const useFirebase = () => {
   };
 
   const handleUserRegister = (email, password, name) => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        handleUserName(name);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const handleUserName = (name) => {
-    updateProfile(auth.currentUser, { displayName: name }).then((result) => {});
+    return updateProfile(auth.currentUser, { displayName: name });
   };
 
   const handleUserLogin = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        console.log(result.user);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   return {

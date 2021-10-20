@@ -15,10 +15,11 @@
       "room": "708",
       "department": "Skin and Allergy",
       "fee": "$100",
-     "fee2": "$70"
+     "fee2": "$70",
+     "descrip": "An experienced and very good doctor. Serving patients for almost 15 years. Has a good record in here and abroad also."
     },
     {
-      "name": "Dr. Ammy Jhon",
+      "name": "Dr. Rakesh Roy",
       "id": "2",
       "img": "https://i.ibb.co/0ZFkr5X/doc-2.jpg",
       "specialist": "Medicine Specialist",
@@ -32,7 +33,8 @@
       "room": "601",
       "department": "Medicine",
       "fee": "$100",
-     "fee2": "$70"
+     "fee2": "$70",
+     "descrip": "Working and serving people for almost 40 years. Always been a very kind kind person. Don't take fee from poor patients."
     },
     {
       "name": "Dr. Tazmeri Sultana",
@@ -49,10 +51,11 @@
       "room": "601",
       "department": "Gastroenterology",
       "fee": "$100",
-     "fee2": "$70"
+     "fee2": "$70",
+     "descrip": "Dr. Tazmeri is a very kind person as a human being also is an experienced and very good doctor. Have 7 years Experience"
     },
     {
-      "name": "Dr.J. M. Ariful Islam",
+      "name": "Dr. Ammy Jhon",
       "id": "4",
       "img": "https://i.ibb.co/z8TvFmz/doc-4.jpg",
       "specialist": "Liver, Pancreatitis Specialist",
@@ -66,10 +69,11 @@
       "room": "601",
       "department": "ENT",
       "fee": "$100",
-     "fee2": "$70"
+     "fee2": "$70",
+     "descrip": "Dr. Ammy jhon and very good doctor. Serving patients for almost 15 years. Has a good record in here and abroad also."
     },
     {
-      "name": "Dr. Ammy Jhon",
+      "name": "Dr. MD Ariful",
       "id": "5",
       "img": "https://i.ibb.co/j6y30s6/doc-5.jpg",
       "specialist": "Orthopedics And Spine Specialist",
@@ -83,10 +87,11 @@
       "room": "207",
       "department": "Orthopedics",
       "fee": "$100",
-     "fee2": "$70"
+     "fee2": "$70",
+     "descrip": "An experienced and very good doctor. Serving patients for almost 15 years. Has a good record in here and abroad also."
     },
     {
-      "name": "Dr. Ammy Jhon",
+      "name": "Dr. Rubaiyya",
       "id": "6",
       "img": "https://i.ibb.co/3yWdc2v/doc-6.jpg",
       "specialist": "Diabetes and Endocrine specialist",
@@ -100,6 +105,7 @@
       "room": "320",
       "department": "Pathologist",
       "fee": "$100",
-     "fee2": "$70"
+     "fee2": "$70",
+     "descrip": "Dr. Rubaiyya and very good doctor. Serving patients for almost 15 years. Has a good record in here and abroad also."
     }
   ]

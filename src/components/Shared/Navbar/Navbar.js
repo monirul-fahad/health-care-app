@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../../images/logo/logo-2.png";
 
@@ -7,7 +7,10 @@ import { HashLink } from "react-router-hash-link";
 import useAuth from "../../../hooks/useAuth";
 
 const Header = () => {
-  const { user, logOut } = useAuth();
+  const { user, logOut, isLoading } = useAuth();
+  if (isLoading) {
+    return <Spinner animation="border" variant="danger" />;
+  }
   return (
     <>
       <Navbar
@@ -56,7 +59,10 @@ const Header = () => {
             </Nav.Link>
 
             <Navbar.Text>
-              Signed in as: <a href="#login">{user?.displayName}</a>
+              Signed in as:{" "}
+              <span className="fs-5 text-info fw-bold">
+                {user?.displayName}
+              </span>{" "}
             </Navbar.Text>
             {user?.email ? (
               <Button onClick={logOut} variant="light" className="ms-2">

@@ -4,9 +4,9 @@ const Contact = () => {
   return (
     <section className="contact-page">
       <div style={{ maxWidth: "700px" }} className="container text-center p-3">
-        <h2 className="pt-5 pb-2">Have a Question?</h2>
+        <h2 className="pt-5 pb-2 text-success">Have a Question?</h2>
         <h5 className="pb-3">Feel free to ask.</h5>
-        <from>
+        <form>
           <input
             type="text"
             className="form-control"
@@ -33,7 +33,7 @@ const Contact = () => {
           />
 
           <button className="btn btn-success mt-4 px-5">SEND MASSAGE</button>
-        </from>
+        </form>
       </div>
     </section>
   );

@@ -23,7 +23,7 @@
 
 @media only screen and (max-width: 688px) {
   .login {
-    width: 280px !important;
+    width: 250px !important;
   }
 
   .google-button {

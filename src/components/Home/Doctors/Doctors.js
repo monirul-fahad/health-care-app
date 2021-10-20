@@ -11,9 +11,9 @@ const Doctors = () => {
       });
   }, []);
   return (
-    <div id="doctors">
+    <div className="doctors" id="doctors">
       <div className="py-5 container">
-        <h2 className="my-3">Special Consultants</h2>
+        <h2 className="my-3 fw-bold text-success">Doctors & Consultants</h2>
         <div className="doctors-container">
           {doctors.map((doctor) => (
             <Doctor key={doctor.id} doctor={doctor}></Doctor>

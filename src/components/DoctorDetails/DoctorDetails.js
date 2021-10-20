@@ -4,7 +4,7 @@ import "./Doctor-Details.css";
 const DoctorDetails = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
-  console.log(data);
+
   useEffect(() => {
     fetch("/doctorsData.json")
       .then((res) => res.json())
