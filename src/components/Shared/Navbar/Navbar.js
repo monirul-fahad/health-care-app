@@ -7,10 +7,8 @@ import { HashLink } from "react-router-hash-link";
 import useAuth from "../../../hooks/useAuth";
 
 const Header = () => {
-  const { user, logOut, isLoading } = useAuth();
-  if (isLoading) {
-    return <Spinner animation="border" variant="danger" />;
-  }
+  const { user, logOut } = useAuth();
+
   return (
     <>
       <Navbar

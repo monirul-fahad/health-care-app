@@ -47,8 +47,6 @@ const Login = () => {
     isLogin
       ? handleUserLogin(email, password)
           .then((result) => {
-            console.log(result.user);
-
             history.push(redirect_url);
           })
           .catch((error) => {
@@ -56,8 +54,6 @@ const Login = () => {
           })
       : handleUserRegister(email, password, name)
           .then((result) => {
-            const user = result.user;
-
             handleUserName(name).then((result) => {});
             history.push(redirect_url);
             window.location.reload();
